@@ -1,8 +1,10 @@
-This repository has been created from this one: https://github.com/juanortiz10/react-redux-saga-router-skeleton which includes
-redux + saga + router + axios already configured.
+This repository has been created from this one: 
+https://github.com/juanortiz10/react-redux-saga-router-skeleton 
+which includes redux + saga + router + axios already configured.
 
-It works basically getting the pokemons from a public api (https://pokeapi.co/), then, they are shown in a list where
-users can click over each one to see the pokemon detail. It also includes paging to see the previous/next 20 pokemons.
+It works basically getting the pokemons from a public api (https://pokeapi.co/), 
+then, they are shown in a list where users can click over each one to see the pokemon detail. 
+It also includes paging to see the previous/next 20 pokemons.
 
 I used Material UI for styling and basic animations were included with Animate.CSS
 
@@ -22,16 +24,17 @@ Libraries used in this project
 * Animate CSS - https://daneden.github.io/animate.css/
 
 For installing
+
 ```
- npm install
- ```
- 
- For starting
- ```
- npm start
- ```
- 
- For testing
- ```
- npm test
- ```
+npm install
+```
+
+For starting
+```
+npm start
+```
+
+For testing
+```
+npm test
+```
