@@ -1,9 +1,3 @@
-const axios = require('axios');
+const axios = require("axios");
 
-export const getDemo = params => {
-	const URL = 'https://reactjsteachingproj.herokuapp.com/users';
-
-	return axios.get(URL).then(response => {
-		return response.data;
-	});
-};
+export const getCall = (url, params) => axios.get(url, params);

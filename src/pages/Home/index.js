@@ -1,43 +1,54 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
-import { getDemoRequest } from '../../redux/actions/demoActions';
-
-import User from '../../components/User';
+import { getPokemons } from "../../redux/actions/pokemons";
+import {
+  pokemonsSelector,
+  pokemonsFetchingSelector,
+  pokemonsSuccessSelector,
+  pokemonsErrorSelector,
+  previousPageSelector,
+  nextPageSelector
+} from "../../redux/selectors";
+import Content from "./components/Content";
 
 class Home extends Component {
-	componentWillMount() {
-		this.props.getDemoRequest('hey');
-	}
-	render() {
-		const { users } = this.props;
+  static propTypes = {
+    getPokemons: PropTypes.func.isRequired,
+    fetching: PropTypes.bool,
+    success: PropTypes.bool,
+    error: PropTypes.any,
+    pokemons: PropTypes.array
+  };
 
-		let items = [];
-		if (typeof users !== 'undefined') {
-			items = users.map((value, index) => {
-				return <User key={index} {...value} />;
-			});
-		}
-		return <div>{items}</div>;
-	}
+  componentDidMount() {
+    this.loadPokemons();
+  }
+
+  loadPokemons = url => {
+    this.props.getPokemons({ url });
+  };
+
+  render() {
+    return <Content {...this.props} onLoadPokemons={this.loadPokemons} />;
+  }
 }
 
-const mapDispatchToProps = (dispatch, props) => {
-	return {
-		getDemoRequest: payload => {
-			dispatch(getDemoRequest(payload));
-		}
-	};
-};
-const mapStateToProps = state => {
-	return {
-		users: state.demoReducer[0]
-	};
+const actions = {
+  getPokemons
 };
 
-Home.propTypes = {
-	dispatch: PropTypes.func
-};
+const mapStateToProps = state => ({
+  fetching: pokemonsFetchingSelector(state),
+  success: pokemonsSuccessSelector(state),
+  error: pokemonsErrorSelector(state),
+  pokemons: pokemonsSelector(state),
+  previousPage: previousPageSelector(state),
+  nextPage: nextPageSelector(state)
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(
+  mapStateToProps,
+  actions
+)(Home);

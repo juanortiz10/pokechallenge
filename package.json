@@ -1,15 +1,20 @@
 {
-  "name": "react-redux-saga-boilerplate",
+  "name": "poke-challenge",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "animate.css": "^3.7.0",
     "axios": "^0.18.0",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-redux": "^5.0.7",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^5.1.1",
     "react-router-dom": "^4.3.1",
-    "redux": "^4.0.0",
-    "redux-saga": "^0.16.0"
+    "react-test-renderer": "^16.8.6",
+    "redux": "^4.0.1",
+    "redux-saga": "^0.16.2"
   },
   "devDependencies": {
     "react-scripts": "1.1.4"
