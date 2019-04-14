@@ -1,11 +1,25 @@
-React Redux Router Saga Boilerplate
+This repository has been created from this one: 
+https://github.com/juanortiz10/react-redux-saga-router-skeleton 
+which includes redux + saga + router + axios already configured.
 
-This repository is created to agilize the beginning of a project and of course, you are interested in using Redux Saga & React Router. That's why I created my own easy boilerplate.
+It works basically getting the pokemons from a public api (https://pokeapi.co/), 
+then, they are shown in a list where users can click over each one to see the pokemon detail. 
+It also includes paging to see the previous/next 20 pokemons.
 
-I'm using these powerful libraries
+I used Material UI for styling and basic animations were included with Animate.CSS
+
+Basic testing was added with Jest + Enzyme.
+
+
+Libraries used in this project
 
 * Redux - https://github.com/reduxjs/redux
 * Redux Saga - https://github.com/redux-saga/redux-saga
 * React Redux - https://github.com/reduxjs/react-redux 
 * React Router - https://github.com/ReactTraining/react-router
 * Axios - https://github.com/axios/axios
+* Material UI - https://material-ui.com/
+* Enzyme - https://airbnb.io/enzyme/
+* Jest - https://jestjs.io/
+* Animate CSS - https://daneden.github.io/animate.css/
+
