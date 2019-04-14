@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import Home from "./pages/Home";
 import PokeDetail from "./pages/PokeDetail";
 import "animate.css";
-
+// @flow
 const App = ({ store }) => (
   <Provider store={store}>
     <Router>

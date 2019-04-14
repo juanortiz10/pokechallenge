@@ -15,6 +15,7 @@ const initialState = {
   fetching: false
 };
 
+// @flow
 export default function(state = initialState, action) {
   switch (action.type) {
     case GET_POKEMONS_START:

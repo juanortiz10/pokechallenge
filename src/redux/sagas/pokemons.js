@@ -9,6 +9,7 @@ import {
   GET_SINGLE_POKEMON_START
 } from "../../consts/actionTypes";
 
+// @flow
 export function* getPokemons({ payload }) {
   try {
     let url = "https://pokeapi.co/api/v2/pokemon";
