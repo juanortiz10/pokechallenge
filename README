@@ -23,23 +23,3 @@ Libraries used in this project
 * Jest - https://jestjs.io/
 * Animate CSS - https://daneden.github.io/animate.css/
 
-For installing
-
-```
-npm install
-
-```
-
-For starting
-
-```
-npm start
-
-```
-
-For testing
-
-```
-npm test
-
-```
