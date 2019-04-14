@@ -27,14 +27,19 @@ For installing
 
 ```
 npm install
+
 ```
 
 For starting
+
 ```
 npm start
+
 ```
 
 For testing
+
 ```
 npm test
+
 ```
